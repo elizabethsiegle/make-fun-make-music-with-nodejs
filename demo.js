@@ -15,33 +15,39 @@ app.post('/iglive', (req, res) => {
   var noteMap = {
     "amaj": "A4 major",
     "bmaj": "B4 major",
-    cmaj: "C4 major",
-    dmaj: "D4 major",
-    emaj: "E4 major",
-    fmaj: "F4 major",
-    gmaj: "G4 major",
-    amin: "A4 minor",
-    bmin: "B4 minor",
-    cmin: "C4 minor",
-    dmin: "D4 minor",
-    emin: "E4 minor",
-    fmin: "F4 minor",
-    gmin: "G4 minor",
-    aflamenco: "A4 flamenco",
-    bflamenco: "B4 flamenco",
-    cflamenco: "C4 flamenco",
-    dflamenco: "D4 flamenco",
-    eflamenco: "E4 flamenco",
-    fflamenco: "F4 flamenco",
-    gflamenco: "G4 flamenco",
-    aegyptian: "A4 egyptian",
-    begyptian: "B4 egyptian",
-    cegyptian: "C4 egyptian",
-    degyptian: "D4 egyptian",
-    eegyptian: "E4 egyptian",
-    fegyptian: "F4 egyptian",
-    gegyptian: "G4 egyptian",
-    abebop: "A4 bebop"
+    "cmaj": "C4 major",
+    "dmaj": "D4 major",
+    "emaj": "E4 major",
+    "fmaj": "F4 major",
+    "gmaj": "G4 major",
+    "amin": "A4 minor",
+    "bmin": "B4 minor",
+    "cmin": "C4 minor",
+    "dmin": "D4 minor",
+    "emin": "E4 minor",
+    "fmin": "F4 minor",
+    "gmin": "G4 minor",
+    "aflamenco": "A4 flamenco",
+    "bflamenco": "B4 flamenco",
+    "cflamenco": "C4 flamenco",
+    "dflamenco": "D4 flamenco",
+    "eflamenco": "E4 flamenco",
+    "fflamenco": "F4 flamenco",
+    "gflamenco": "G4 flamenco",
+    "aegyptian": "A4 egyptian",
+    "begyptian": "B4 egyptian",
+    "cegyptian": "C4 egyptian",
+    "degyptian": "D4 egyptian",
+    "eegyptian": "E4 egyptian",
+    "fegyptian": "F4 egyptian",
+    "gegyptian": "G4 egyptian",
+    "abebop": "A4 bebop",
+    "bbebop": "B4 bebop",
+    "bbebop": "B4 bebop",
+    "cbebop": "C4 bebop",
+    "dbebop": "D4 bebop",
+    "ebebop": "E4 bebop",
+    "gbebop": "G4 bebop"
   };
   if (msg in noteMap) {
     twiml.message("You sent an " + noteMap[msg]);
@@ -52,35 +58,6 @@ app.post('/iglive', (req, res) => {
       "Try another chord A-G: Amin=A4 minor, Bmaj=B4 major, cflamenco=c4 flamenco, degyptian=d4 egyptian, ebebop=e4 bebop"
     );
   }
-  
-  // else if(msg == 'abebop') {
-  //   twiml.message('You sent a A bebop');
-  //   textarr.push('A4 bebop');
-  // }
-  // else if(msg == 'bbebop') {
-  //   twiml.message('You sent a B bebop');
-  //   textarr.push('B4 bebop');
-  // }
-  // else if(msg == 'cbebop') {
-  //   twiml.message('You sent a C bebop');
-  //   textarr.push('C4 bebop');
-  // }
-  // else if(msg == 'dbebop') {
-  //   twiml.message('You sent a D bebop');
-  //   textarr.push('D4 bebop');
-  // }
-  // else if(msg == 'ebebop') {
-  //   twiml.message('You sent a E bebop');
-  //   textarr.push('E4 bebop');
-  // }
-  // else if(msg == 'fbebop') {
-  //   twiml.message('You sent a F bebop');
-  //   textarr.push('F4 bebop');
-  // }
-  // else if(msg == 'gbebop') {
-  //   twiml.message('You sent a G bebop');
-  //   textarr.push('G4 bebop');
-  // }
 
   res.writeHead(200, {'Content-Type': 'text/xml'});
   res.end(twiml.toString());
